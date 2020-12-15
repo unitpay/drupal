@@ -1,0 +1,15 @@
+commerce_unitpay_gateway.commerce_payment_gateway.plugin.unitpay_redirect_checkout:
+  type: commerce_payment_gateway_configuration
+  mapping:
+    domain:
+      type: string
+      label: 'Domain'
+    public_key:
+      type: string
+      label: 'Public key'
+    private_key:
+      type: string
+      label: 'Private key'
+    nds:
+      type: string
+      label: 'NDS (none, vat0, vat10, vat20)'

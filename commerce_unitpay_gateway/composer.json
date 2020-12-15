@@ -1,0 +1,6 @@
+{
+  "name": "https://github.com/unitpay/drupal",
+  "description": "An integration between Drupal 8-9 with Commerce 2 and a UnitPay gateway.",
+  "type": "drupal-module",
+  "require": {}
+}

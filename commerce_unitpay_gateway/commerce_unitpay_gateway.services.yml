@@ -1,0 +1,7 @@
+services:
+  logger.channel.commerce_unitpay_gateway:
+    parent: logger.channel_base
+    arguments:
+      - 'commerce_unitpay_gateway'
+  commerce_unitpay_gateway.unitpay_core:
+    class: Drupal\commerce_unitpay_gateway\UnitPayCore
