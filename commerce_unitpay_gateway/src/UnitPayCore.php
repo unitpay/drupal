@@ -107,6 +107,14 @@ class UnitPayCore
     }
 
     /**
+     * @return mixed
+     */
+    public function getCurrentMethod()
+    {
+        return $this->currentMethod;
+    }
+
+    /**
      * @param $order_id
      * @param $currency
      * @param $desc
@@ -220,6 +228,7 @@ class UnitPayCore
                 "name" => $item->getTitle(),
                 "count" => round($item->getQuantity()),
                 "price" => $this->priceFormat($item->getTotalPrice()->getNumber() / round($item->getQuantity())),
+                "sum" => $this->priceFormat($item->getAdjustedTotalPrice()->getNumber()), // getAdjustedUnitPrice
                 "type" => "commodity",
                 "currency" => $item->getTotalPrice()->getCurrencyCode(),
                 "nds" => $nds,

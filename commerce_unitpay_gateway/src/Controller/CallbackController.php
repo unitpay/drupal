@@ -92,7 +92,7 @@ class CallbackController extends ControllerBase
 
                     $result = $this->unitPayCore->validateCallback($order);
 
-                    if ($this->unitPayCore->isProcessSuccess()) {
+                    if($this->unitPayCore->isProcessSuccess() && $this->unitPayCore->getCurrentMethod() == "pay") {
                         $payment_gateway_plugin->onNotify($request);
 
                         $payment_storage = $this->entityTypeManager->getStorage('commerce_payment');
